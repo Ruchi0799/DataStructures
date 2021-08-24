@@ -11,7 +11,14 @@ public class StackRunner {
         myStack.push(myFirstNode);
         myStack.push(mySecondNode);
         myStack.push(myThirdNode);
+        System.out.println("PRINTING MY NODES:");
         myStack.printMyNodes();
+        System.out.println("PEEP NODE:");
+        myStack.peek();
+        myStack.pop();
+        System.out.println("NODES AFTER POP OPERATION");
+        myStack.printMyNodes();
+
 
     }
 }

@@ -26,6 +26,14 @@ public class MyStack<K>{
         }
     }
 
+    public void peek(){
+        System.out.println(this.head.getKey());
+    }
+
+    public void pop(){
+        this.head=this.head.getNext();
+    }
+
     public void printMyNodes() {
 
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
