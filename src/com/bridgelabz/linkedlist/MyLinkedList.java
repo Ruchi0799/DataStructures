@@ -84,6 +84,21 @@ public class MyLinkedList<K> {
 
     }
 
+    public void sortNodes(){
+        INode tempNode=this.head;
+        INode minNode=this.head;
+        while (tempNode.getNext()!=null) {
+            /*if(minNode.getKey()tempNode.getKey())
+            {
+
+            }*/
+
+
+        }
+        }
+
+
+
     public void printMyNodes() {
 
         StringBuffer myNodes = new StringBuffer("My Nodes: ");

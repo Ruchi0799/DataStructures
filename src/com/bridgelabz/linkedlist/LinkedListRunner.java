@@ -25,6 +25,8 @@ public class LinkedListRunner {
         System.out.println("Deleting node 40...");
         myLinkedList.deleteNode(mySecondNode,myFourthNode);
         myLinkedList.printMyNodes();
+        myLinkedList.sortNodes();
+
 
 
     }
