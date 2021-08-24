@@ -20,6 +20,7 @@ public class MyLinkedList<K> {
             while (tempNode.getNext()!=null)
             {
                 tempNode=tempNode.getNext();
+
             }
             tempNode.setNext(newNode);
             newNode.setNext(null);
@@ -35,9 +36,19 @@ public class MyLinkedList<K> {
            tempNode.setNext(mySecondNode);
        }
 
+    }
 
+    public void pop(){
+        INode tempNode=this.head;
+        do
+        {
+            tempNode=tempNode.getNext();
+        }while (tempNode.getNext()==null);
+        tempNode.setNext(null);
+        
 
     }
+
     public void printMyNodes() {
 
         StringBuffer myNodes = new StringBuffer("My Nodes: ");

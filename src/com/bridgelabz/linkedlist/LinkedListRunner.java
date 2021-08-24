@@ -10,6 +10,9 @@ public class LinkedListRunner {
         myLinkedList.add(myThirdNode);
         myLinkedList.addNodeInBetween(myFirstNode,mySecondNode);
         myLinkedList.printMyNodes();
+        myLinkedList.pop();
+        System.out.println();
+        myLinkedList.printMyNodes();
 
     }
 }
