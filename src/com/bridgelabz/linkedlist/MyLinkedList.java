@@ -38,6 +38,18 @@ public class MyLinkedList<K> {
 
     }
 
+    public void addNodeAfter(INode<K> mySecondNode,INode<K> myFourthNode) {
+        INode tempNode = this.head;
+        while (tempNode!= null) {
+            if (tempNode.getKey().equals(mySecondNode.getKey())) {
+                myFourthNode.setNext(tempNode.getNext());
+                tempNode.setNext(myFourthNode);
+                break;
+            }
+            tempNode=tempNode.getNext();
+        }
+    }
+
     public void pop(){
         INode tempNode=this.head;
         this.head=tempNode.getNext();
