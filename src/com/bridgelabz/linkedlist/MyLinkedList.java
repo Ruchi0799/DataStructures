@@ -26,6 +26,18 @@ public class MyLinkedList<K> {
         }
     }
 
+
+    public void addNodeInBetween(INode<K> myFirstNode,INode<K> mySecondNode)
+    {
+        INode tempNode = this.head;
+       if(tempNode.getKey()!=myFirstNode) {
+           mySecondNode.setNext(tempNode.getNext());
+           tempNode.setNext(mySecondNode);
+       }
+
+
+
+    }
     public void printMyNodes() {
 
         StringBuffer myNodes = new StringBuffer("My Nodes: ");

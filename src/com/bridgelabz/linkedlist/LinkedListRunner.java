@@ -7,8 +7,8 @@ public class LinkedListRunner {
         MyNode<Integer> myThirdNode=new MyNode<>(70);
         MyLinkedList myLinkedList=new MyLinkedList();
         myLinkedList.add(myFirstNode);
-        myLinkedList.add(mySecondNode);
         myLinkedList.add(myThirdNode);
+        myLinkedList.addNodeInBetween(myFirstNode,mySecondNode);
         myLinkedList.printMyNodes();
 
     }
