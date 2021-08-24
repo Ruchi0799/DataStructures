@@ -13,6 +13,11 @@ public class MyQueue<K> {
         add(newNode);
     }
 
+    public void dequeue()
+    {
+        this.head=this.head.getNext();
+    }
+
     public void add(INode<K> newNode) {
         if (this.head == null) {
             this.head = newNode;

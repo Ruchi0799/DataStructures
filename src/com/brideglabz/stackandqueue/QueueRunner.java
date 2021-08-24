@@ -11,6 +11,10 @@ public class QueueRunner {
         myQueue.enqueue(myThirdNode);
         System.out.println("PRINTING MY NODES");
         myQueue.printMyNodes();
+        myQueue.dequeue();
+        System.out.println();
+        System.out.println("AFTER DEQUEUE");
+        myQueue.printMyNodes();
 
     }
 }
