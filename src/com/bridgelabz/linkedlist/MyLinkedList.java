@@ -40,12 +40,7 @@ public class MyLinkedList<K> {
 
     public void pop(){
         INode tempNode=this.head;
-        do
-        {
-            tempNode=tempNode.getNext();
-        }while (tempNode.getNext()==null);
-        tempNode.setNext(null);
-        
+        this.head=tempNode.getNext();
 
     }
 
