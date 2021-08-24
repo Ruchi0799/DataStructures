@@ -1,14 +1,37 @@
 package com.bridgelabz.linkedlist;
 
-public class MyLinkedList {
-    public static void main(String[] args) {
-        MyNode<Integer> firstNode=new MyNode<Integer>(56);
-        MyNode<Integer> secondNode=new MyNode<Integer>(30);
-        MyNode<Integer> thirdNode=new MyNode<Integer>(70);
-        firstNode.setNext(secondNode);
-        secondNode.setNext(thirdNode);
+public class MyLinkedList<K> {
+    public INode<K> head;
+    public INode<K> tail;
+
+    public MyLinkedList() {
+
+    }
+
+    public void add(INode<K> newNode) {
+        if (this.tail == null) {
+            this.tail = newNode;
+        }
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            INode<K> tempNode = this.head;
+            this.head = newNode;
+            this.head.setNext(tempNode);
+        }
+    }
+
+    public void printMyNodes() {
+
+        INode tempNode = head;
+        while (tempNode!= null) {
+
+            System.out.println(tempNode.getKey());
+            tempNode = tempNode.getNext();
 
 
+
+        }
     }
 }
 
