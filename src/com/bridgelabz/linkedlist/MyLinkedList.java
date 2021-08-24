@@ -44,6 +44,21 @@ public class MyLinkedList<K> {
 
     }
 
+    public void search(INode<K> searchNode){
+        INode tempNode=this.head;
+        while (tempNode.getNext()!=null)
+        {
+
+            if (tempNode==searchNode)
+            {
+                System.out.println(searchNode.getKey() +" is present");
+            }
+            tempNode=tempNode.getNext();
+
+        }
+
+    }
+
     public void printMyNodes() {
 
         StringBuffer myNodes = new StringBuffer("My Nodes: ");

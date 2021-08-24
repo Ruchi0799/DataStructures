@@ -13,6 +13,8 @@ public class LinkedListRunner {
         myLinkedList.pop();
         System.out.println();
         myLinkedList.printMyNodes();
+        System.out.println();
+        myLinkedList.search(mySecondNode);
 
     }
 }
