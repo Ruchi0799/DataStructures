@@ -10,17 +10,22 @@ public class LinkedListRunner {
         myLinkedList.add(myFirstNode);
         myLinkedList.add(myThirdNode);
         myLinkedList.printMyNodes();
+
         myLinkedList.addNodeInBetween(myFirstNode,mySecondNode);
         System.out.println();
+        System.out.println("Adding node in between 56 and 70");
         myLinkedList.printMyNodes();
-        //myLinkedList.pop();
         System.out.println();
-        //myLinkedList.printMyNodes();
-        //System.out.println();
+        System.out.println("Searching 30 in list");
         myLinkedList.search(mySecondNode);
         myLinkedList.addNodeAfter(mySecondNode,myFourthNode);
-        //myLinkedList.printMyNodes();
+        System.out.println("Adding node 40...");
         myLinkedList.printMyNodes();
+        System.out.println();
+        System.out.println("Deleting node 40...");
+        myLinkedList.deleteNode(mySecondNode,myFourthNode);
+        myLinkedList.printMyNodes();
+
 
     }
 }
