@@ -1,6 +1,5 @@
 package com.bridgelabz.hashtable;
 
-//import com.bridgelabz.hashtable.INode;
 
 public class MyLinkedList<K> {
     public INode<K> head;
