@@ -47,6 +47,10 @@ public class MyLinkedList<K> {
             }
         }
 
+    public void delete(){
+
+    }
+
 
 
     public void printMyNodes() {
