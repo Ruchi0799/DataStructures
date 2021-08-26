@@ -22,5 +22,7 @@ public class MyBinaryTreeTest {
         System.out.println(size);
 
         System.out.println(myBinaryTree);
+        System.out.println("Is 63 present?");
+        myBinaryTree.search(63);
     }
 }
