@@ -1,5 +1,4 @@
-package com.bridgelabz.hashtable;
-
+package com.bridgelabz.practiceproblems;
 
 public class MyLinkedList<K> {
     public INode<K> head;
@@ -7,9 +6,8 @@ public class MyLinkedList<K> {
 
     public MyLinkedList() {
 
-        this.head=null;
-        this.tail=null;
     }
+
 
     public void add(INode<K> newNode) {
         if (this.head == null) {
@@ -31,27 +29,35 @@ public class MyLinkedList<K> {
     }
 
 
-        public void append(INode<K> myNode)
-        {
-            if(this.head==null)
-            {
-                this.head=myNode;
-            }
-            if(this.tail==null)
-            {
-                this.tail=myNode;
-            }
-            else {
-                this.tail.setNext(myNode);
-                this.tail=myNode;
-            }
-        }
+    public void delete(K key) {
+        INode tempNode = head;
+        INode prevNode = null;
 
-    public void delete(){
+        while(tempNode != null) {
+            if (tempNode.getKey().equals(key)) {
+                tempNode = tempNode.getNext();
+                prevNode.setNext(tempNode);
+                break;
+            }
+            prevNode = tempNode;
+            tempNode = tempNode.getNext();
+        }
 
     }
 
-
+    public INode<K> search(K key) {
+        INode temp = head;
+        int flag = 1;
+        while (temp!=null) {
+            if (temp.getNext()!=null && (temp.getNext().getKey().equals(key))) {
+                flag = 0;
+                return temp;
+            }
+            temp = temp.getNext();
+        }
+        if (flag == 1) return null;
+        return null;
+    }
 
     public void printMyNodes() {
 
@@ -67,26 +73,5 @@ public class MyLinkedList<K> {
 
 
         }
-
-    public INode<K> search1(K key) {
-
-        INode<K> tempNode=head;
-        while (tempNode!=null && tempNode.getNext()!=null)
-        {
-            if (tempNode.getKey().equals(key))
-            {
-                return tempNode;
-            }
-            tempNode=tempNode.getNext();
-        }
-        return null;
-
-
     }
-
-    @Override
-    public String toString() {
-        return "MyLinkedListNodes{" + head + "}" ;
-    }
-}
 
